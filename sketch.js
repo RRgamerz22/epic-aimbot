@@ -16,8 +16,7 @@ function setup() {
   world = engine.world;
 
   playerBase = new PlayerBase(300, random(450, height - 300), 180, 150);
-//create a player object from the Player class.
-player = new  Player(300,500,50,70);
+  player1 = new Player(300,playerBase.body.position.y - 150, 80, 180);
 
   
   computerBase = new ComputerBase(
@@ -29,7 +28,7 @@ player = new  Player(300,500,50,70);
   computer = new Computer(
     width - 280,
     computerBase.body.position.y - 153,
-    50,
+    80,
     180
   );
 
@@ -50,7 +49,7 @@ function draw() {
  
   playerBase.display();
 //call the display() function for the player object.
-  player.display();
+  player1.display();
 
   computerBase.display();
   computer.display();
